@@ -22,5 +22,3 @@ For more complex photographic image, significant runtime memory saves are possib
 
 % convert forest_2048_1536.png -colors 65536 -dither FloydSteinberg forest_2048_1536_65536_fs.png
 
-SKMaxTextureLoad SKMaxTextureLoadOpt WhackAMoleHD
-
