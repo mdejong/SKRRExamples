@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C2E94381CFF718300C7BB35 /* RenderReduce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2E94371CFF718300C7BB35 /* RenderReduce.framework */; };
+		3C2E943E1CFF7D4200C7BB35 /* dummy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E943D1CFF7D4200C7BB35 /* dummy.cpp */; };
+		3CF961E01CF91D69002181F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961DF1CF91D69002181F5 /* main.m */; };
+		3CF961E31CF91D69002181F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961E21CF91D69002181F5 /* AppDelegate.m */; };
+		3CF961E61CF91D69002181F5 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961E51CF91D69002181F5 /* GameScene.m */; };
+		3CF961E81CF91D69002181F5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3CF961E71CF91D69002181F5 /* GameScene.sks */; };
+		3CF961EB1CF91D69002181F5 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961EA1CF91D69002181F5 /* GameViewController.m */; };
+		3CF961EE1CF91D69002181F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF961EC1CF91D69002181F5 /* Main.storyboard */; };
+		3CF961F01CF91D69002181F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF961EF1CF91D69002181F5 /* Assets.xcassets */; };
+		3CF961F31CF91D69002181F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF961F11CF91D69002181F5 /* LaunchScreen.storyboard */; };
+		3CF961FD1CF91EAD002181F5 /* SmileyFace8bitGray_4096.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CF961FB1CF91EAD002181F5 /* SmileyFace8bitGray_4096.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C2E94371CFF718300C7BB35 /* RenderReduce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RenderReduce.framework; sourceTree = "<group>"; };
+		3C2E943D1CFF7D4200C7BB35 /* dummy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dummy.cpp; sourceTree = "<group>"; };
+		3CF961DB1CF91D68002181F5 /* SKMaxTextureLoadOpt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKMaxTextureLoadOpt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF961DF1CF91D69002181F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CF961E11CF91D69002181F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3CF961E21CF91D69002181F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3CF961E41CF91D69002181F5 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		3CF961E51CF91D69002181F5 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		3CF961E71CF91D69002181F5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3CF961E91CF91D69002181F5 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		3CF961EA1CF91D69002181F5 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		3CF961ED1CF91D69002181F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CF961EF1CF91D69002181F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CF961F21CF91D69002181F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CF961F41CF91D69002181F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF961FB1CF91EAD002181F5 /* SmileyFace8bitGray_4096.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmileyFace8bitGray_4096.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CF961D81CF91D68002181F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C2E94381CFF718300C7BB35 /* RenderReduce.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CF961D21CF91D68002181F5 = {
+			isa = PBXGroup;
+			children = (
+				3CF961DD1CF91D69002181F5 /* SKMaxTextureLoadOpt */,
+				3CF961DC1CF91D68002181F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CF961DC1CF91D68002181F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CF961DB1CF91D68002181F5 /* SKMaxTextureLoadOpt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CF961DD1CF91D69002181F5 /* SKMaxTextureLoadOpt */ = {
+			isa = PBXGroup;
+			children = (
+				3C2E943D1CFF7D4200C7BB35 /* dummy.cpp */,
+				3C2E94371CFF718300C7BB35 /* RenderReduce.framework */,
+				3CF961E11CF91D69002181F5 /* AppDelegate.h */,
+				3CF961E21CF91D69002181F5 /* AppDelegate.m */,
+				3CF961E41CF91D69002181F5 /* GameScene.h */,
+				3CF961E51CF91D69002181F5 /* GameScene.m */,
+				3CF961E71CF91D69002181F5 /* GameScene.sks */,
+				3CF961E91CF91D69002181F5 /* GameViewController.h */,
+				3CF961EA1CF91D69002181F5 /* GameViewController.m */,
+				3CF961EC1CF91D69002181F5 /* Main.storyboard */,
+				3CF961EF1CF91D69002181F5 /* Assets.xcassets */,
+				3CF961F11CF91D69002181F5 /* LaunchScreen.storyboard */,
+				3CF961F41CF91D69002181F5 /* Info.plist */,
+				3CF961DE1CF91D69002181F5 /* Supporting Files */,
+			);
+			path = SKMaxTextureLoadOpt;
+			sourceTree = "<group>";
+		};
+		3CF961DE1CF91D69002181F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CF961FB1CF91EAD002181F5 /* SmileyFace8bitGray_4096.png */,
+				3CF961DF1CF91D69002181F5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CF961DA1CF91D68002181F5 /* SKMaxTextureLoadOpt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CF961F71CF91D69002181F5 /* Build configuration list for PBXNativeTarget "SKMaxTextureLoadOpt" */;
+			buildPhases = (
+				3CF961D71CF91D68002181F5 /* Sources */,
+				3CF961D81CF91D68002181F5 /* Frameworks */,
+				3CF961D91CF91D68002181F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKMaxTextureLoadOpt;
+			productName = SKMaxTextureLoadOpt;
+			productReference = 3CF961DB1CF91D68002181F5 /* SKMaxTextureLoadOpt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CF961D31CF91D68002181F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = HelpURock;
+				TargetAttributes = {
+					3CF961DA1CF91D68002181F5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 3CF961D61CF91D68002181F5 /* Build configuration list for PBXProject "SKMaxTextureLoadOpt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CF961D21CF91D68002181F5;
+			productRefGroup = 3CF961DC1CF91D68002181F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CF961DA1CF91D68002181F5 /* SKMaxTextureLoadOpt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CF961D91CF91D68002181F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CF961E81CF91D69002181F5 /* GameScene.sks in Resources */,
+				3CF961F31CF91D69002181F5 /* LaunchScreen.storyboard in Resources */,
+				3CF961F01CF91D69002181F5 /* Assets.xcassets in Resources */,
+				3CF961EE1CF91D69002181F5 /* Main.storyboard in Resources */,
+				3CF961FD1CF91EAD002181F5 /* SmileyFace8bitGray_4096.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CF961D71CF91D68002181F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CF961EB1CF91D69002181F5 /* GameViewController.m in Sources */,
+				3CF961E31CF91D69002181F5 /* AppDelegate.m in Sources */,
+				3CF961E61CF91D69002181F5 /* GameScene.m in Sources */,
+				3C2E943E1CFF7D4200C7BB35 /* dummy.cpp in Sources */,
+				3CF961E01CF91D69002181F5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3CF961EC1CF91D69002181F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF961ED1CF91D69002181F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CF961F11CF91D69002181F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CF961F21CF91D69002181F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CF961F51CF91D69002181F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CF961F61CF91D69002181F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CF961F81CF91D69002181F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SKMaxTextureLoadOpt",
+				);
+				INFOPLIST_FILE = SKMaxTextureLoadOpt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpurock.SKMaxTextureLoadOpt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CF961F91CF91D69002181F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SKMaxTextureLoadOpt",
+				);
+				INFOPLIST_FILE = SKMaxTextureLoadOpt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpurock.SKMaxTextureLoadOpt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CF961D61CF91D68002181F5 /* Build configuration list for PBXProject "SKMaxTextureLoadOpt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF961F51CF91D69002181F5 /* Debug */,
+				3CF961F61CF91D69002181F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CF961F71CF91D69002181F5 /* Build configuration list for PBXNativeTarget "SKMaxTextureLoadOpt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CF961F81CF91D69002181F5 /* Debug */,
+				3CF961F91CF91D69002181F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CF961D31CF91D68002181F5 /* Project object */;
+}
