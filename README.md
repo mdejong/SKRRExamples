@@ -22,3 +22,9 @@ For more complex photographic image, significant runtime memory saves are possib
 
 % convert forest_2048_1536.png -colors 65536 -dither FloydSteinberg forest_2048_1536_65536_fs.png
 
+To add Framework to new project.
+
+Copy RenderReduce.framework and dummy.cpp into your project directory for an Objective-C or Swift project.
+
+Note that the RenderReduce framework is only functional on 64bit iOS hardware. This covers A7 and newer processors.
+
