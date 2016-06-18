@@ -13,6 +13,10 @@ WhackAMoleHD/
 
 Simple Demo of loading a pixel perfect large background image.
 
+SKSwiftCompare/
+
+Side by side compare of colortable compressed images.
+
 
 These examples demonstrate a SpriteKit Framework that reduces runtime memory usage for textures rendered via a SKSpriteNode.
 
