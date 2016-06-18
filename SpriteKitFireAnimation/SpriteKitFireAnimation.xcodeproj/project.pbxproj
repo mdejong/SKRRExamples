@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CFB6A8B1CAF2B6C00E7C177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A8A1CAF2B6C00E7C177 /* main.m */; };
+		3CFB6A8E1CAF2B6C00E7C177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A8D1CAF2B6C00E7C177 /* AppDelegate.m */; };
+		3CFB6A911CAF2B6C00E7C177 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A901CAF2B6C00E7C177 /* GameScene.m */; };
+		3CFB6A931CAF2B6C00E7C177 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB6A921CAF2B6C00E7C177 /* GameScene.sks */; };
+		3CFB6A961CAF2B6C00E7C177 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A951CAF2B6C00E7C177 /* GameViewController.m */; };
+		3CFB6A991CAF2B6C00E7C177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB6A971CAF2B6C00E7C177 /* Main.storyboard */; };
+		3CFB6A9B1CAF2B6C00E7C177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB6A9A1CAF2B6C00E7C177 /* Assets.xcassets */; };
+		3CFB6A9E1CAF2B6C00E7C177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB6A9C1CAF2B6C00E7C177 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CFB6A861CAF2B6C00E7C177 /* SpriteKitFireAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitFireAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CFB6A8A1CAF2B6C00E7C177 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3CFB6A8C1CAF2B6C00E7C177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3CFB6A8D1CAF2B6C00E7C177 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3CFB6A8F1CAF2B6C00E7C177 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		3CFB6A901CAF2B6C00E7C177 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		3CFB6A921CAF2B6C00E7C177 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3CFB6A941CAF2B6C00E7C177 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		3CFB6A951CAF2B6C00E7C177 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		3CFB6A981CAF2B6C00E7C177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3CFB6A9A1CAF2B6C00E7C177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3CFB6A9D1CAF2B6C00E7C177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CFB6A9F1CAF2B6C00E7C177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CFB6A831CAF2B6C00E7C177 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CFB6A7D1CAF2B6C00E7C177 = {
+			isa = PBXGroup;
+			children = (
+				3CFB6A881CAF2B6C00E7C177 /* SpriteKitFireAnimation */,
+				3CFB6A871CAF2B6C00E7C177 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CFB6A871CAF2B6C00E7C177 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB6A861CAF2B6C00E7C177 /* SpriteKitFireAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CFB6A881CAF2B6C00E7C177 /* SpriteKitFireAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB6A8C1CAF2B6C00E7C177 /* AppDelegate.h */,
+				3CFB6A8D1CAF2B6C00E7C177 /* AppDelegate.m */,
+				3CFB6A8F1CAF2B6C00E7C177 /* GameScene.h */,
+				3CFB6A901CAF2B6C00E7C177 /* GameScene.m */,
+				3CFB6A921CAF2B6C00E7C177 /* GameScene.sks */,
+				3CFB6A941CAF2B6C00E7C177 /* GameViewController.h */,
+				3CFB6A951CAF2B6C00E7C177 /* GameViewController.m */,
+				3CFB6A971CAF2B6C00E7C177 /* Main.storyboard */,
+				3CFB6A9A1CAF2B6C00E7C177 /* Assets.xcassets */,
+				3CFB6A9C1CAF2B6C00E7C177 /* LaunchScreen.storyboard */,
+				3CFB6A9F1CAF2B6C00E7C177 /* Info.plist */,
+				3CFB6A891CAF2B6C00E7C177 /* Supporting Files */,
+			);
+			path = SpriteKitFireAnimation;
+			sourceTree = "<group>";
+		};
+		3CFB6A891CAF2B6C00E7C177 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB6A8A1CAF2B6C00E7C177 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CFB6A851CAF2B6C00E7C177 /* SpriteKitFireAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CFB6AA21CAF2B6C00E7C177 /* Build configuration list for PBXNativeTarget "SpriteKitFireAnimation" */;
+			buildPhases = (
+				3CFB6A821CAF2B6C00E7C177 /* Sources */,
+				3CFB6A831CAF2B6C00E7C177 /* Frameworks */,
+				3CFB6A841CAF2B6C00E7C177 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpriteKitFireAnimation;
+			productName = SpriteKitFireAnimation;
+			productReference = 3CFB6A861CAF2B6C00E7C177 /* SpriteKitFireAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CFB6A7E1CAF2B6C00E7C177 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = HelpURock;
+				TargetAttributes = {
+					3CFB6A851CAF2B6C00E7C177 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3CFB6A811CAF2B6C00E7C177 /* Build configuration list for PBXProject "SpriteKitFireAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CFB6A7D1CAF2B6C00E7C177;
+			productRefGroup = 3CFB6A871CAF2B6C00E7C177 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CFB6A851CAF2B6C00E7C177 /* SpriteKitFireAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CFB6A841CAF2B6C00E7C177 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CFB6A931CAF2B6C00E7C177 /* GameScene.sks in Resources */,
+				3CFB6A9E1CAF2B6C00E7C177 /* LaunchScreen.storyboard in Resources */,
+				3CFB6A9B1CAF2B6C00E7C177 /* Assets.xcassets in Resources */,
+				3CFB6A991CAF2B6C00E7C177 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CFB6A821CAF2B6C00E7C177 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CFB6A961CAF2B6C00E7C177 /* GameViewController.m in Sources */,
+				3CFB6A8E1CAF2B6C00E7C177 /* AppDelegate.m in Sources */,
+				3CFB6A911CAF2B6C00E7C177 /* GameScene.m in Sources */,
+				3CFB6A8B1CAF2B6C00E7C177 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3CFB6A971CAF2B6C00E7C177 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CFB6A981CAF2B6C00E7C177 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3CFB6A9C1CAF2B6C00E7C177 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CFB6A9D1CAF2B6C00E7C177 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CFB6AA01CAF2B6C00E7C177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CFB6AA11CAF2B6C00E7C177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3CFB6AA31CAF2B6C00E7C177 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SpriteKitFireAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpurock.SpriteKitFireAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3CFB6AA41CAF2B6C00E7C177 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SpriteKitFireAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.helpurock.SpriteKitFireAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CFB6A811CAF2B6C00E7C177 /* Build configuration list for PBXProject "SpriteKitFireAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CFB6AA01CAF2B6C00E7C177 /* Debug */,
+				3CFB6AA11CAF2B6C00E7C177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CFB6AA21CAF2B6C00E7C177 /* Build configuration list for PBXNativeTarget "SpriteKitFireAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CFB6AA31CAF2B6C00E7C177 /* Debug */,
+				3CFB6AA41CAF2B6C00E7C177 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CFB6A7E1CAF2B6C00E7C177 /* Project object */;
+}
