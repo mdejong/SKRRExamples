@@ -46,5 +46,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>PrefersOpenGL</key>
+	<true/>
 </dict>
 </plist>

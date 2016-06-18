@@ -8,6 +8,12 @@
 
 #import "GameScene.h"
 
+//#define USE_RENDER_REDUCE
+
+#if defined(USE_RENDER_REDUCE)
+@import RenderReduce;
+#endif // USE_RENDER_REDUCE
+
 @interface GameScene ()
 
 @property (nonatomic, retain) SKSpriteNode *background;
@@ -26,9 +32,37 @@
   
   // background
   
+#if defined(USE_RENDER_REDUCE)
+  NSDictionary *options = @{
+                            @"render": @"reduce",
+                            @"filename": @"Background",
+                            
+                            // When the original does not exactly match the dimensions
+                            // of an output node the use CoreGraphics to resize
+                            @"textureSizePixels": [NSValue valueWithCGSize:self.scene.size],
+#if defined(DEBUG)
+                            // Validation and dumping of intermediate files really slows both
+                            // the encodeTexture and makeSpriteNode calls and should not be
+                            // enabled for an optimized build.
+                            @"validate": @"original",
+                            @"dumpIntermediate": @(TRUE),
+#endif // DEBUG
+                            };
+  
+  NSMutableDictionary *results = [NSMutableDictionary dictionary];
+  
+  RRTexture *texture = [RRTexture encodeTexture:options results:results];
+  
+  SKSpriteNode *background = [RRNode makeSpriteNode:view texture:texture];
+  
+  background.position = CGPointMake(self.scene.size.width / 2, self.scene.size.height / 2);
+  
+  assert(CGSizeEqualToSize(background.size, self.scene.size) == 1);
+#else
   SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background"];
   background.position = CGPointMake(self.scene.size.width / 2, self.scene.size.height / 2);
   background.size = self.scene.size;
+#endif // USE_RENDER_REDUCE
   
   background.zPosition = 0;
   

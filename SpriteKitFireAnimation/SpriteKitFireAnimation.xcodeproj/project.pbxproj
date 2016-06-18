@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CB65D461D1610B8007535CC /* dummy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB65D441D1610B8007535CC /* dummy.cpp */; };
+		3CB65D471D1610B8007535CC /* RenderReduce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB65D451D1610B8007535CC /* RenderReduce.framework */; };
 		3CFB6A8B1CAF2B6C00E7C177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A8A1CAF2B6C00E7C177 /* main.m */; };
 		3CFB6A8E1CAF2B6C00E7C177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A8D1CAF2B6C00E7C177 /* AppDelegate.m */; };
 		3CFB6A911CAF2B6C00E7C177 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB6A901CAF2B6C00E7C177 /* GameScene.m */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CB65D441D1610B8007535CC /* dummy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dummy.cpp; sourceTree = "<group>"; };
+		3CB65D451D1610B8007535CC /* RenderReduce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RenderReduce.framework; sourceTree = "<group>"; };
 		3CFB6A861CAF2B6C00E7C177 /* SpriteKitFireAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitFireAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFB6A8A1CAF2B6C00E7C177 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CFB6A8C1CAF2B6C00E7C177 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB65D471D1610B8007535CC /* RenderReduce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 				3CFB6A9A1CAF2B6C00E7C177 /* Assets.xcassets */,
 				3CFB6A9C1CAF2B6C00E7C177 /* LaunchScreen.storyboard */,
 				3CFB6A9F1CAF2B6C00E7C177 /* Info.plist */,
+				3CB65D441D1610B8007535CC /* dummy.cpp */,
+				3CB65D451D1610B8007535CC /* RenderReduce.framework */,
 				3CFB6A891CAF2B6C00E7C177 /* Supporting Files */,
 			);
 			path = SpriteKitFireAnimation;
@@ -161,6 +168,7 @@
 				3CFB6A961CAF2B6C00E7C177 /* GameViewController.m in Sources */,
 				3CFB6A8E1CAF2B6C00E7C177 /* AppDelegate.m in Sources */,
 				3CFB6A911CAF2B6C00E7C177 /* GameScene.m in Sources */,
+				3CB65D461D1610B8007535CC /* dummy.cpp in Sources */,
 				3CFB6A8B1CAF2B6C00E7C177 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpriteKitFireAnimation",
+				);
 				INFOPLIST_FILE = SpriteKitFireAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -286,6 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpriteKitFireAnimation",
+				);
 				INFOPLIST_FILE = SpriteKitFireAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -314,6 +330,7 @@
 				3CFB6AA41CAF2B6C00E7C177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
