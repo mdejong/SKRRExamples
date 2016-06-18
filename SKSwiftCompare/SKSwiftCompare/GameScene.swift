@@ -33,9 +33,16 @@ class GameScene: SKScene {
     
     if (originalNode != nil) {
       originalNode.position = CGPoint(x:0,y:0)
-      view.scene!.anchorPoint = CGPoint(x:0.5, y:0.5)
       
-      self.addChild(originalNode)
+      let cropNode = SKCropNode()
+      let originalSize = originalNode.size
+      let w2 = originalSize.width/2
+      let maskNode = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(w2, originalSize.height))
+      maskNode.position = CGPoint(x:-w2/2,y:0)
+      cropNode.maskNode = maskNode
+      
+      cropNode.addChild(originalNode)
+      self.addChild(cropNode)
       
       NSLog("background.size : %d %d", originalNode.size.width, originalNode.size.height)
     }
@@ -45,9 +52,7 @@ class GameScene: SKScene {
   //
   // convert TreeFog.png -colors 65536 -dither FloydSteinberg TreeFog_fs_65536.png
   
-  func makeCenteredOriginalRightSide(view: SKView) {
-    let filename = "TreeFog_fs_65536.png"
-    
+  func makeCenteredOriginalRightSide(view: SKView, filename: String) {
     #if DEBUG
       let options: [String: String] = [
         "filename": filename,
@@ -77,9 +82,16 @@ class GameScene: SKScene {
     
     if (originalNode != nil) {
       originalNode.position = CGPoint(x:0,y:0)
-      view.scene!.anchorPoint = CGPoint(x:0.5, y:0.5)
       
-      self.addChild(originalNode)
+      let cropNode = SKCropNode()
+      let originalSize = originalNode.size
+      let w2 = originalSize.width/2
+      let maskNode = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(w2, originalSize.height))
+      maskNode.position = CGPoint(x:w2/2,y:0)
+      cropNode.maskNode = maskNode
+      
+      cropNode.addChild(originalNode)
+      self.addChild(cropNode)
       
       NSLog("background.size : %d %d", originalNode.size.width, originalNode.size.height)
       
@@ -97,9 +109,33 @@ class GameScene: SKScene {
     }
   }
   
+  func makeCenterLine(view: SKView) {
+    // Line behind the 2 images
+    let lineNode = SKShapeNode()
+    let pathToDraw = CGPathCreateMutable()
+    CGPathMoveToPoint(pathToDraw, nil, 0.0, -500.0)
+    CGPathAddLineToPoint(pathToDraw, nil, 0.0, 500.0)
+    lineNode.position = CGPoint(x:0, y:0)
+    lineNode.lineWidth = 2.0
+    lineNode.strokeColor = SKColor.whiteColor()
+    lineNode.path = pathToDraw
+    self.addChild(lineNode)
+  }
+  
   override func didMoveToView(view: SKView) {
-    //makeCenteredOriginalLeftSide(view)
-    makeCenteredOriginalRightSide(view)
+    view.scene!.anchorPoint = CGPoint(x:0.5, y:0.5)
+    
+    makeCenterLine(view)
+    
+    makeCenteredOriginalLeftSide(view)
+  
+    // Limiting to 65536 save a lot of memory but does not cause noticable loss
+    
+    makeCenteredOriginalRightSide(view, filename:"TreeFog_fs_65536.png")
+    
+    // Limiting the image to 256 colors creates noticable banding
+    
+//    makeCenteredOriginalRightSide(view, filename:"TreeFog_256.png")
   }
   
   override func update(currentTime: CFTimeInterval) {
