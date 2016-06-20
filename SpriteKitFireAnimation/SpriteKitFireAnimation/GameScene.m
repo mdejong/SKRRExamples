@@ -39,14 +39,18 @@
                             
                             // When the original does not exactly match the dimensions
                             // of an output node the use CoreGraphics to resize
-                            @"textureSizePixels": [NSValue valueWithCGSize:self.scene.size],
-#if defined(DEBUG)
-                            // Validation and dumping of intermediate files really slows both
-                            // the encodeTexture and makeSpriteNode calls and should not be
-                            // enabled for an optimized build.
-                            @"validate": @"original",
-                            @"dumpIntermediate": @(TRUE),
-#endif // DEBUG
+                            @"textureSizePoints": [NSValue valueWithCGSize:self.scene.size],
+                            
+                            // Note that validation is not possible when original input is explicitly
+                            // resized by passing a "textureSizePoints"
+                            
+//#if defined(DEBUG)
+//                            // Validation and dumping of intermediate files really slows both
+//                            // the encodeTexture and makeSpriteNode calls and should not be
+//                            // enabled for an optimized build.
+//                            @"validate": @"original",
+//                            @"dumpIntermediate": @(TRUE),
+//#endif // DEBUG
                             };
   
   NSMutableDictionary *results = [NSMutableDictionary dictionary];
@@ -58,6 +62,17 @@
   background.position = CGPointMake(self.scene.size.width / 2, self.scene.size.height / 2);
   
   assert(CGSizeEqualToSize(background.size, self.scene.size) == 1);
+  
+  if (background) {
+    NSLog(@"background.position : %d %d", (int)background.position.x, (int)background.position.y);
+    
+    NSLog(@"background.size : %d %d", (int)background.size.width, (int)background.size.height);
+    
+    NSLog(@"original   num bytes %10d : aka %10d kB", [results[@"originalNumBytes"] intValue], (int)round([results[@"originalNumBytes"] floatValue]/1000.0));
+    NSLog(@"compressed num bytes %10d : aka %10d kB", [results[@"packedNumBytes"] intValue], (int)round([results[@"packedNumBytes"] floatValue]/1000.0));
+    
+    NSLog(@"compression ratio : %0.3f", [results[@"packedNumBytes"] floatValue] / [results[@"originalNumBytes"] floatValue]);
+  }
 #else
   SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background"];
   background.position = CGPointMake(self.scene.size.width / 2, self.scene.size.height / 2);
@@ -77,8 +92,8 @@
   
   pedestal.anchorPoint = CGPointMake(0.5, 0.95);
   
-  pedestal.xScale = 0.8;
-  pedestal.yScale = 0.8;
+  pedestal.xScale = 0.8 / 2;
+  pedestal.yScale = 0.8 / 2;
   
   pedestal.zPosition = 1;
   
@@ -103,12 +118,12 @@
   
     for (UITouch *touch in touches) {
         //CGPoint location = [touch locationInNode:self];
-        CGPoint location = CGPointMake(1068, 425);
+        CGPoint location = CGPointMake(1068 / 2, 425 / 2);
       
         SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"FireVector"];
         
-        sprite.xScale = 0.8;
-        sprite.yScale = 0.8;
+        sprite.xScale = 0.8 / 2;
+        sprite.yScale = 0.8 / 2;
         sprite.position = location;
       
         sprite.anchorPoint = CGPointMake(0.5, 0.0);
