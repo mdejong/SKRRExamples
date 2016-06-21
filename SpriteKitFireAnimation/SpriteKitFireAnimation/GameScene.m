@@ -157,7 +157,21 @@
   
   // Animation
   
-  SKAction *action = [SKAction customActionWithDuration:1.0f/30.0f actionBlock:^(SKNode *node, CGFloat elapsedTime) {
+  int totalNumFrames = (int) self.fireTextures.count;
+  float totalAnimationDuration = totalNumFrames / (1.0f / 60.0f);
+  
+  // Set to TRUE to display at 30 FPS instead of 60 FPS
+  const BOOL changeEveryOtherFrame = FALSE;
+  __block int everyOtherFrameCount = 0;
+  
+  SKAction *action = [SKAction customActionWithDuration:totalAnimationDuration actionBlock:^(SKNode *node, CGFloat elapsedTime) {
+    //NSLog(@"showNextFrame %d : %0.3f", self.frameNum, elapsedTime);
+    if (changeEveryOtherFrame) {
+      everyOtherFrameCount++;
+    }
+    if (changeEveryOtherFrame && ((everyOtherFrameCount % 2) == 0)) {
+      return;
+    }
     [self showNextFrame:nil];
   }];
   
