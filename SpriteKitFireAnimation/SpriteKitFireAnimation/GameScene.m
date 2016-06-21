@@ -118,6 +118,37 @@
   return;
 }
 
+/*
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+  NSLog(@"pedestal position %d,%d", (int)self.pedestal.position.x, (int)self.pedestal.position.y);
+  NSLog(@"est pedestal anchor position %d,%d", (int)(self.pedestal.position.x + self.pedestal.size.width * self.pedestal.anchorPoint.x), (int)(self.pedestal.position.y + self.pedestal.size.height * self.pedestal.anchorPoint.y));
+  
+  for (UITouch *touch in touches) {
+    CGPoint location = [touch locationInNode:self];
+    //CGPoint location = CGPointMake(1068 / 2, 425 / 2);
+    
+    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"FireVector"];
+    
+    sprite.xScale = 0.8 / 2;
+    sprite.yScale = 0.8 / 2;
+    sprite.position = location;
+    
+    sprite.anchorPoint = CGPointMake(0.5, 0.0);
+    
+    sprite.zPosition = 2;
+    
+    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+    [sprite runAction:[SKAction repeatActionForever:action]];
+    
+    [self addChild:sprite];
+    
+    NSLog(@"click position %d,%d", (int)sprite.position.x, (int)sprite.position.y);
+    
+    NSLog(@"click percentage %0.3f,%0.3f", sprite.position.x / self.scene.size.width, sprite.position.y / self.scene.size.height);
+  }
+}
+*/
+
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
 }
@@ -130,8 +161,8 @@
     self.fireTextures = [NSMutableArray array];
   }
   
-  const int maxNumFrames = 10;
-//  const int maxNumFrames = 60;
+//  const int maxNumFrames = 10;
+  const int maxNumFrames = 60;
   
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     for (int i=1; i <= maxNumFrames; i++) @autoreleasepool {
@@ -167,13 +198,16 @@
     return;
   }
   
-  CGPoint locationPer = CGPointMake(0.971, 0.424);
+  CGPoint locationPer = CGPointMake(0.5, 0.285);
   
-  CGPoint location = CGPointMake(sprite.size.width * locationPer.x, sprite.size.height * locationPer.y);
+  CGPoint location = CGPointMake(self.scene.size.width * locationPer.x, self.scene.size.height * locationPer.y);
   
   sprite.position = location;
   
   NSLog(@"fire animation position %d,%d", (int)sprite.position.x, (int)sprite.position.y);
+  NSLog(@"fire animation percentage %0.3f,%0.3f", sprite.position.x / self.scene.size.width, sprite.position.y / self.scene.size.height);
+  
+  return;
 }
 
 // timer invoked after startup to encode texture frames
@@ -186,12 +220,15 @@
   
   [RRNode updateSpriteNode:self.view texture:texture node:sprite];
   
-  sprite.anchorPoint = CGPointMake(0.55, 0.035);
+  sprite.anchorPoint = CGPointMake(0.5, 0.04);
   
   sprite.zPosition = 2;
   
-//  SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-//  [sprite runAction:[SKAction repeatActionForever:action]];
+  if ((0))
+  {
+  SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+  [sprite runAction:[SKAction repeatActionForever:action]];
+  }
   
   [self addChild:sprite];
   
