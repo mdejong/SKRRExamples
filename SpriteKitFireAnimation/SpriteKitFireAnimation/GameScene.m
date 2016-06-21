@@ -155,11 +155,14 @@
   
   self.fireSprite = sprite;
   
-  {
-    NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/30.0 target:self selector:@selector(showNextFrame:) userInfo:nil repeats:TRUE];
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
-  }
+  // Animation
   
+  SKAction *action = [SKAction customActionWithDuration:1.0f/30.0f actionBlock:^(SKNode *node, CGFloat elapsedTime) {
+    [self showNextFrame:nil];
+  }];
+  
+  [self.fireSprite runAction:[SKAction repeatActionForever:action] withKey:@"animation"];
+                      
   return;
 }
 
