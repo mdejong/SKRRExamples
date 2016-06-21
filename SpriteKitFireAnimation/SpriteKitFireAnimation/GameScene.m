@@ -35,16 +35,40 @@
 
 @property (nonatomic, retain) SKSpriteNode *fireSprite;
 
+@property (nonatomic, retain) NSTimer *encodeTimer;
+
 @end
 
 @implementation GameScene
 
 -(void)didMoveToView:(SKView *)view {
-  // Setup your scene here
-
-  self.scaleMode = SKSceneScaleModeFill;
+  self.scene.backgroundColor = [UIColor redColor];
   
-  // background
+  [self makeBackgroundNode];
+  
+  return;
+}
+
+- (void)didChangeSize:(CGSize)oldSize
+{
+  NSLog(@"SKScene.didChangeSize old size %d x %d", (int)oldSize.width, (int)(int)oldSize.height);
+  
+  if (self.background) {
+    // Resize after initial invocation of didMoveToView
+    
+    [self makeBackgroundNode];
+  }
+}
+
+-(void) makeBackgroundNode {
+  // Use new size of SKScene
+  
+  CGSize sceneSize = self.size;
+  
+  NSLog(@"makeBackgroundNode at size %d x %d", (int)sceneSize.width, (int)sceneSize.height);
+  
+  [self.background removeFromParent];
+  self.background = nil; // dealloc memory
   
   SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"Background"];
   background.position = CGPointMake(self.scene.size.width / 2, self.scene.size.height / 2);
@@ -56,6 +80,9 @@
   self.background = background;
   
   // Insert node for Pedestal
+  
+  [self.pedestal removeFromParent];
+  self.pedestal = nil; // dealloc memory
   
   SKSpriteNode *pedestal = [SKSpriteNode spriteNodeWithImageNamed:@"Pedestal"];
   
@@ -77,11 +104,15 @@
   
   NSLog(@"pedestal position %d,%d", (int)self.pedestal.position.x, (int)self.pedestal.position.y);
   
-  // Kick off encode timer
+  [self updateFireSpritePoisiton];
   
+  // Kick off encode timer on first invocation
+  
+  if (self.encodeTimer == nil)
   {
     NSTimer *timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(startEncode) userInfo:nil repeats:FALSE];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    self.encodeTimer = timer;
   }
   
   return;
@@ -99,8 +130,8 @@
     self.fireTextures = [NSMutableArray array];
   }
   
-//  const int maxNumFrames = 10;
-  const int maxNumFrames = 60;
+  const int maxNumFrames = 10;
+//  const int maxNumFrames = 60;
   
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     for (int i=1; i <= maxNumFrames; i++) @autoreleasepool {
@@ -126,21 +157,34 @@
   return;
 }
 
+// Update fire sprite position after resize
+
+- (void) updateFireSpritePoisiton
+{
+  SKSpriteNode *sprite = self.fireSprite;
+  
+  if (sprite == nil) {
+    return;
+  }
+  
+  CGPoint locationPer = CGPointMake(0.971, 0.424);
+  
+  CGPoint location = CGPointMake(sprite.size.width * locationPer.x, sprite.size.height * locationPer.y);
+  
+  sprite.position = location;
+  
+  NSLog(@"fire animation position %d,%d", (int)sprite.position.x, (int)sprite.position.y);
+}
+
 // timer invoked after startup to encode texture frames
 
 - (void) doneEncodeInMainThread
 {
-  CGPoint location = CGPointMake(1068 / 2, 425 / 2);
-  
   RRTexture *texture = self.fireTextures[0];
   
   SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithColor:[UIColor whiteColor] size:texture.pointSize];
-
-  [RRNode updateSpriteNode:self.view texture:texture node:sprite];
   
-//  sprite.xScale = 0.8 / 2;
-//  sprite.yScale = 0.8 / 2;
-  sprite.position = location;
+  [RRNode updateSpriteNode:self.view texture:texture node:sprite];
   
   sprite.anchorPoint = CGPointMake(0.55, 0.035);
   
@@ -151,9 +195,9 @@
   
   [self addChild:sprite];
   
-  NSLog(@"animation position %d,%d", (int)sprite.position.x, (int)sprite.position.y);
-  
   self.fireSprite = sprite;
+  
+  [self updateFireSpritePoisiton];
   
   // Animation
   
