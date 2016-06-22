@@ -3,10 +3,13 @@
 //
 //  Copyright (c) 2016 HelpURock. All rights reserved.
 //
-//  This module holds instance references to an already encoded
-//  image texture. The caller creates an instance of
+//  This module holds instance references to an already encoded texture.
+//  The caller creates an instance of a texture either before associating
+//  with a node or at some init time before the node is created.
 
-#import <SpriteKit/SpriteKit.h>
+@import SpriteKit;
+@import ImageIO;
+@import MobileCoreServices;
 
 @interface RRTexture : NSObject
 

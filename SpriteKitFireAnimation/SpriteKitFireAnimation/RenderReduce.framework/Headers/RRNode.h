@@ -4,9 +4,12 @@
 //  Copyright (c) 2016 HelpURock. All rights reserved.
 //
 //  This module implements rendering logic for sprite kit that
-//  reduces rendering memory requirements.
+//  reduces rendering memory requirements. The functions here
+//  accept a texture object created in the RRTexture module.
 
-#import <SpriteKit/SpriteKit.h>
+@import SpriteKit;
+@import ImageIO;
+@import MobileCoreServices;
 
 @class RRTexture;
 
@@ -18,7 +21,9 @@
 + (SKSpriteNode*) makeSpriteNode:(SKView*)skView
                          texture:(RRTexture*)texture;
 
-// Update the texture and shader objects associated with a Node
+// Update the texture and shader objects associated with a Node.
+// This method will update the texture and the shader and possibly
+// rerun node validation logic.
 
 + (BOOL) updateSpriteNode:(SKView*)skView
                   texture:(RRTexture*)texture
