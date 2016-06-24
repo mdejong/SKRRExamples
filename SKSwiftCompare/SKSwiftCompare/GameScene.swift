@@ -129,11 +129,11 @@ class GameScene: SKScene {
     
     makeCenteredOriginalLeftSide(view)
   
-    // Limiting to 65536 save a lot of memory but does not cause noticable loss
+    // Limiting to 65536 save a lot of memory but does not cause noticable loss : comp ratio 0.440
     
     makeCenteredOriginalRightSide(view, filename:"TreeFog_fs_65536.png")
     
-    // Limiting the image to 256 colors creates noticable banding
+    // Limiting the image to 256 colors creates noticable banding : comp ratio 0.255
     
 //    makeCenteredOriginalRightSide(view, filename:"TreeFog_256.png")
   }
