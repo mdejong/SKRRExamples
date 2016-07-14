@@ -57,13 +57,11 @@ class GameScene: SKScene {
       let options: [String: String] = [
         "filename": filename,
         "render": "reduce",
-        // Validation and dumping of intermediate files really slows both
-        // the encodeTexture and makeSpriteNode calls and should not be
-        // enabled for an optimized build. With validation the encode and
-        // validation takes about 5 seconds. Without validation the encode
-        // and render takes about 1 second.
+        // Validation really slows the encodeTexture and makeSpriteNode
+        // calls and should not be enabled for an optimized build.
+        // With validation the encode and validation takes about 5 seconds.
+        // Without validation the encode and render takes about 1 second.
         "validate": "original",
-        "dumpIntermediate": "1",
         ]
     #else
       let options: [String: String] = [

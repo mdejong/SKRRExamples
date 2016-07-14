@@ -48,13 +48,9 @@
                             
                             @"filename": filename,
 #if defined(DEBUG)
-                            // Validation and dumping of intermediate files really slows both
-                            // the encodeTexture and makeSpriteNode calls and should not be
-                            // enabled for an optimized build. With validation the encode and
-                            // validation takes about 5 seconds. Without validation the encode
-                            // and render takes about 1 second.
+                            // Validation really slows the encodeTexture and makeSpriteNode
+                            // calls and should not be enabled for an optimized build.
                             @"validate": @"original",
-                            @"dumpIntermediate": @(TRUE),
 #endif // DEBUG
                             };
   

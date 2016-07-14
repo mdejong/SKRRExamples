@@ -39,12 +39,9 @@
                             @"render": @"reduce",
                             @"filename": filename,
 #if defined(DEBUG)
-                            // Validation and dumping of intermediate files really slows both
-                            // the encodeTexture and makeSpriteNode calls and should not be
-                            // enabled for an optimized build.
-                            
+                            // Validation really slows the encodeTexture and makeSpriteNode
+                            // calls and should not be enabled for an optimized build.
                             @"validate": @"original",
-                            @"dumpIntermediate": @(TRUE),
 #endif // DEBUG
                             };
   

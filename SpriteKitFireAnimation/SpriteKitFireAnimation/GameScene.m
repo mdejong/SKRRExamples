@@ -295,11 +295,9 @@
 #endif // DISABLE_RENDER_REDUCE_FOR_FIRE
                             @"filename": filename,
 #if defined(DEBUG) && !defined(DISABLE_RENDER_REDUCE_FOR_FIRE)
-                            // Validation and dumping of intermediate files really slows both
-                            // the encodeTexture and makeSpriteNode calls and should not be
-                            // enabled for an optimized build.
+                            // Validation really slows the encodeTexture and makeSpriteNode
+                            // calls and should not be enabled for an optimized build.
                             @"validate": @"original",
-                            @"dumpIntermediate": @(TRUE),
 #endif // DEBUG
                             };
   
