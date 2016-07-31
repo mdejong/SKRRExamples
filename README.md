@@ -1,6 +1,8 @@
 # SKRRExamples
 SpriteKit Render Reduce Framework Examples
 
+http://www.modejong.com/RenderReduce/
+
 SKMaxTextureLoad/
 
 Loads the largest possible texture into a SpriteKit node.
