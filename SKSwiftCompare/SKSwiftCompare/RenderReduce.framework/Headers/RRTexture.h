@@ -43,6 +43,13 @@
 + (RRTexture*) encodeTexture:(NSDictionary*)options
                      results:(NSMutableDictionary*)results;
 
+// Decode an already compressed texture that is included
+// in a spacific bundle and resource name as indicated
+// in the passed in options.
+
++ (RRTexture*) decodeTexture:(NSDictionary*)options
+                     results:(NSMutableDictionary*)results;
+
 // Adler32 checksum
 
 + (uint32_t) adlerForData:(NSData*)data;
