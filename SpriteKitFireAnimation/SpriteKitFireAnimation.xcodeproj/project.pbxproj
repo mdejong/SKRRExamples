@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C635FED1D777CA300BB6356 /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C635FEC1D777CA300BB6356 /* libcompression.tbd */; };
 		3C7F740C1D18AA3000F6125F /* FireCroppedLoop0001.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7F73D01D18AA3000F6125F /* FireCroppedLoop0001.png */; };
 		3C7F740D1D18AA3000F6125F /* FireCroppedLoop0002.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7F73D11D18AA3000F6125F /* FireCroppedLoop0002.png */; };
 		3C7F740E1D18AA3000F6125F /* FireCroppedLoop0003.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7F73D21D18AA3000F6125F /* FireCroppedLoop0003.png */; };
@@ -80,6 +81,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C635FEC1D777CA300BB6356 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
 		3C7F73D01D18AA3000F6125F /* FireCroppedLoop0001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireCroppedLoop0001.png; sourceTree = "<group>"; };
 		3C7F73D11D18AA3000F6125F /* FireCroppedLoop0002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireCroppedLoop0002.png; sourceTree = "<group>"; };
 		3C7F73D21D18AA3000F6125F /* FireCroppedLoop0003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FireCroppedLoop0003.png; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C635FED1D777CA300BB6356 /* libcompression.tbd in Frameworks */,
 				3CB65D471D1610B8007535CC /* RenderReduce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +269,9 @@
 				3CFB6A9A1CAF2B6C00E7C177 /* Assets.xcassets */,
 				3CFB6A9C1CAF2B6C00E7C177 /* LaunchScreen.storyboard */,
 				3CFB6A9F1CAF2B6C00E7C177 /* Info.plist */,
-				3CB65D441D1610B8007535CC /* dummy.cpp */,
 				3C7F73CF1D18AA3000F6125F /* Fire */,
+				3C635FEC1D777CA300BB6356 /* libcompression.tbd */,
+				3CB65D441D1610B8007535CC /* dummy.cpp */,
 				3CB65D451D1610B8007535CC /* RenderReduce.framework */,
 				3CFB6A891CAF2B6C00E7C177 /* Supporting Files */,
 			);

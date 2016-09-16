@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C2E94381CFF718300C7BB35 /* RenderReduce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2E94371CFF718300C7BB35 /* RenderReduce.framework */; };
 		3C2E943E1CFF7D4200C7BB35 /* dummy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2E943D1CFF7D4200C7BB35 /* dummy.cpp */; };
+		3CF092A81D8CA2AB00E99EBB /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF092A71D8CA2AB00E99EBB /* libcompression.tbd */; };
 		3CF961E01CF91D69002181F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961DF1CF91D69002181F5 /* main.m */; };
 		3CF961E31CF91D69002181F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961E21CF91D69002181F5 /* AppDelegate.m */; };
 		3CF961E61CF91D69002181F5 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF961E51CF91D69002181F5 /* GameScene.m */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		3C2E94371CFF718300C7BB35 /* RenderReduce.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RenderReduce.framework; sourceTree = "<group>"; };
 		3C2E943D1CFF7D4200C7BB35 /* dummy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dummy.cpp; sourceTree = "<group>"; };
+		3CF092A71D8CA2AB00E99EBB /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
 		3CF961DB1CF91D68002181F5 /* SKMaxTextureLoadOpt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKMaxTextureLoadOpt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF961DF1CF91D69002181F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CF961E11CF91D69002181F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF092A81D8CA2AB00E99EBB /* libcompression.tbd in Frameworks */,
 				3C2E94381CFF718300C7BB35 /* RenderReduce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +73,7 @@
 		3CF961DD1CF91D69002181F5 /* SKMaxTextureLoadOpt */ = {
 			isa = PBXGroup;
 			children = (
+				3CF092A71D8CA2AB00E99EBB /* libcompression.tbd */,
 				3C2E943D1CFF7D4200C7BB35 /* dummy.cpp */,
 				3C2E94371CFF718300C7BB35 /* RenderReduce.framework */,
 				3CF961E11CF91D69002181F5 /* AppDelegate.h */,

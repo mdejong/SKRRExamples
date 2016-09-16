@@ -19,6 +19,7 @@
 		3C8580571D138FAC0006A9AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8580551D138FAC0006A9AD /* Main.storyboard */; };
 		3C8580591D138FAC0006A9AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8580581D138FAC0006A9AD /* Assets.xcassets */; };
 		3C85805C1D138FAC0006A9AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C85805A1D138FAC0006A9AD /* LaunchScreen.storyboard */; };
+		3CF092AA1D8CA2E200E99EBB /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF092A91D8CA2E200E99EBB /* libcompression.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3C8580581D138FAC0006A9AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C85805B1D138FAC0006A9AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C85805D1D138FAC0006A9AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF092A91D8CA2E200E99EBB /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = usr/lib/libcompression.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF092AA1D8CA2E200E99EBB /* libcompression.tbd in Frameworks */,
 				3C10E46D1D1390FD007B3982 /* RenderReduce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +83,7 @@
 				3C8580581D138FAC0006A9AD /* Assets.xcassets */,
 				3C85805A1D138FAC0006A9AD /* LaunchScreen.storyboard */,
 				3C85805D1D138FAC0006A9AD /* Info.plist */,
+				3CF092A91D8CA2E200E99EBB /* libcompression.tbd */,
 				3C10E4701D1398AB007B3982 /* dummy.cpp */,
 				3C10E46C1D1390FD007B3982 /* RenderReduce.framework */,
 			);
