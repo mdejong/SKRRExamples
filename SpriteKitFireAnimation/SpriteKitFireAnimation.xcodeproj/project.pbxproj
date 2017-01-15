@@ -317,6 +317,7 @@
 				TargetAttributes = {
 					3CFB6A851CAF2B6C00E7C177 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 9F74CLHA49;
 					};
 				};
 			};
@@ -533,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9F74CLHA49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SpriteKitFireAnimation",
@@ -550,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9F74CLHA49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SpriteKitFireAnimation",
