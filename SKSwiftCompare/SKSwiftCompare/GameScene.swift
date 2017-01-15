@@ -15,7 +15,7 @@ class GameScene: SKScene {
 
   // Load a texture directly from TreeFog.png with no runtime reduction
   
-  func makeCenteredOriginalLeftSide(view: SKView) {
+  func makeCenteredOriginalLeftSide(_ view: SKView) {
     let filename = "TreeFog.png"
     
     let options: [String: String] = [
@@ -28,23 +28,23 @@ class GameScene: SKScene {
     // Recompress texture during app startup. If there are many textures and a long startup
     // delay then this would be better done in AppDelegate init logic, but this is fine here.
     
-    let texture = RRTexture.encodeTexture(options, results:results)
+    let texture = RRTexture.encode(options, results:results)
     let originalNode = RRNode.makeSpriteNode(view, texture:texture)
     
     if (originalNode != nil) {
-      originalNode.position = CGPoint(x:0,y:0)
+      originalNode?.position = CGPoint(x:0,y:0)
       
       let cropNode = SKCropNode()
-      let originalSize = originalNode.size
-      let w2 = originalSize.width/2
-      let maskNode = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(w2, originalSize.height))
+      let originalSize = originalNode?.size
+      let w2 = (originalSize?.width)!/2
+      let maskNode = SKSpriteNode(color: UIColor.white, size: CGSize(width: w2, height: (originalSize?.height)!))
       maskNode.position = CGPoint(x:-w2/2,y:0)
       cropNode.maskNode = maskNode
       
-      cropNode.addChild(originalNode)
+      cropNode.addChild(originalNode!)
       self.addChild(cropNode)
       
-      NSLog("background.size : %d %d", originalNode.size.width, originalNode.size.height)
+      NSLog("background.size : %d %d", originalNode!.size.width, originalNode!.size.height)
     }
   }
   
@@ -52,7 +52,7 @@ class GameScene: SKScene {
   //
   // convert TreeFog.png -colors 65536 -dither FloydSteinberg TreeFog_fs_65536.png
   
-  func makeCenteredOriginalRightSide(view: SKView, filename: String) {
+  func makeCenteredOriginalRightSide(_ view: SKView, filename: String) {
     #if DEBUG
       let options: [String: String] = [
         "filename": filename,
@@ -75,23 +75,23 @@ class GameScene: SKScene {
     // Recompress texture during app startup. If there are many textures and a long startup
     // delay then this would be better done in AppDelegate init logic, but this is fine here.
     
-    let texture = RRTexture.encodeTexture(options, results:results)
+    let texture = RRTexture.encode(options, results:results)
     let originalNode = RRNode.makeSpriteNode(view, texture:texture)
     
     if (originalNode != nil) {
-      originalNode.position = CGPoint(x:0,y:0)
+      originalNode?.position = CGPoint(x:0,y:0)
       
       let cropNode = SKCropNode()
-      let originalSize = originalNode.size
-      let w2 = originalSize.width/2
-      let maskNode = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(w2, originalSize.height))
+      let originalSize = originalNode?.size
+      let w2 = (originalSize?.width)!/2
+      let maskNode = SKSpriteNode(color: UIColor.white, size: CGSize(width: w2, height: (originalSize?.height)!))
       maskNode.position = CGPoint(x:w2/2,y:0)
       cropNode.maskNode = maskNode
       
-      cropNode.addChild(originalNode)
+      cropNode.addChild(originalNode!)
       self.addChild(cropNode)
       
-      NSLog("background.size : %d %d", originalNode.size.width, originalNode.size.height)
+      NSLog("background.size : %d %d", originalNode!.size.width, originalNode!.size.height)
       
       let originalNumBytes: Int = results["originalNumBytes"] as! Int
       let packedNumBytes: Int = results["packedNumBytes"] as! Int
@@ -107,20 +107,20 @@ class GameScene: SKScene {
     }
   }
   
-  func makeCenterLine(view: SKView) {
+  func makeCenterLine(_ view: SKView) {
     // Line behind the 2 images
     let lineNode = SKShapeNode()
-    let pathToDraw = CGPathCreateMutable()
-    CGPathMoveToPoint(pathToDraw, nil, 0.0, -500.0)
-    CGPathAddLineToPoint(pathToDraw, nil, 0.0, 500.0)
+    let pathToDraw = CGMutablePath()
+    pathToDraw.move(to: CGPoint(x: 0.0, y: -500.0))
+    pathToDraw.addLine(to: CGPoint(x: 0.0, y: 500))
     lineNode.position = CGPoint(x:0, y:0)
     lineNode.lineWidth = 2.0
-    lineNode.strokeColor = SKColor.whiteColor()
+    lineNode.strokeColor = SKColor.white
     lineNode.path = pathToDraw
     self.addChild(lineNode)
   }
   
-  override func didMoveToView(view: SKView) {
+  override func didMove(to view: SKView) {
     view.scene!.anchorPoint = CGPoint(x:0.5, y:0.5)
     
     makeCenterLine(view)
@@ -136,7 +136,7 @@ class GameScene: SKScene {
 //    makeCenteredOriginalRightSide(view, filename:"TreeFog_256.png")
   }
   
-  override func update(currentTime: CFTimeInterval) {
+  override func update(_ currentTime: TimeInterval) {
     // Called before each frame is rendered
   }
 }
