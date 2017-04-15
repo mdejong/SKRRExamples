@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					3CF961DA1CF91D68002181F5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9F74CLHA49;
 					};
 				};
 			};
@@ -291,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9F74CLHA49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SKMaxTextureLoadOpt",
@@ -306,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9F74CLHA49;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SKMaxTextureLoadOpt",
